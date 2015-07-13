@@ -187,7 +187,18 @@ if (window.DISQUS) {
 $(document).ready(function(){
 	indepth_sizeAdjust(true);
 	indepth_preloadImgs();
-
+	 var ventana_alto = $(window).height();
+	var ventana_ancho = $(window).width();
+	
+	$(".vimeoFrame").css({
+		"width": (ventana_ancho)+"px",
+		"height": (ventana_alto-0)+"px"	
+	});
+	
+	$(".vimeo").css({
+		"width": (ventana_ancho+150)+"px",
+		"height": (ventana_alto+120)+"px"	
+	})
 		loadDisqus($("#indepth_coments"),disqus_url, "http://juanfutbol.com/indepth/"+disqus_url);
 		
 		$('#indepth_container').fullpage({
@@ -243,7 +254,12 @@ $(".indepth_boton").click(function(){
 		$("#indepth_resultados").css("position","fixed");
 		
 		$.fn.fullpage.moveTo("cover");
+		$.fn.fullpage.destroy();
 		
+		$("body").css({
+			height:"100%",
+			overflow: "hidden"
+		})
 	}
 	
 	});

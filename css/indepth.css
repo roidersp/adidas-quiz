@@ -7,6 +7,18 @@
 	display: none;
 }
 
+.vimeo{
+	display:block;
+	width:638px;
+	height:358px; 
+	margin:0 auto;
+	margin-top: -60px;
+	margin-left: -75px;
+}
+
+.vimeoFrame {width:638px; height:358px; overflow:hidden; margin:0 auto;}
+
+
 
 .indepth_pages{
 	width: 100%;
