@@ -260,8 +260,29 @@ $(".indepth_boton").click(function(){
 			height:"100%",
 			overflow: "hidden"
 		})
+	}else{
+		
+		var v={"pregunta1":false,"pregunta2":false,"pregunta3":false,"pregunta4":false,"pregunta5":false,"pregunta6":false};
+		$("input:radio").each(function(){
+			if($(this).is(":checked")){
+				v[$(this).attr("name")]=true;
+			}
+		});
+		
+		$.each(v, function(i,item){
+			if(!item){
+				$.fn.fullpage.moveTo(i);
+				return false;
+			}
+		});
+		
+		console.log(v);
 	}
 	
+	});
+	
+	$(document).on("click", "#indepth_button_ver" ,function(){
+		$.fn.fullpage.moveSectionDown();
 	});
 });
 
