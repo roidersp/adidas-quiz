@@ -365,11 +365,39 @@
 }
 
 #indepth_resultados{
-	background-image: url(../images/Resultados/Jugadores/Bale.jpg);
+	
 	background-size: cover;
 	background-repeat: no-repeat;
 	display: table;
 }
+
+.j_Bale{
+	background-image: url(../images/Resultados/Jugadores/Bale.jpg);
+}
+
+.j_Ozil{
+	background-image: url(../images/Resultados/Jugadores/Ozil.jpg);
+}
+.j_James{
+	background-image: url(../images/Resultados/Jugadores/James.jpg);
+}
+.j_Xabi{
+	background-image: url(../images/Resultados/Jugadores/Xabi.jpg);
+}
+.j_Rakitic{
+	background-image: url(../images/Resultados/Jugadores/Rakitic.jpg);
+}
+.j_Layun{
+	background-image: url(../images/Resultados/Jugadores/Layun.jpg);
+}
+.j_Muller{
+	background-image: url(../images/Resultados/Jugadores/Muller.jpg);
+}
+.j_Suarez{
+	background-image: url(../images/Resultados/Jugadores/Suarez.jpg);
+}
+
+
 
 .indepth_image_tenis{
 	width: 600px;

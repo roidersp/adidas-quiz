@@ -190,12 +190,12 @@
 								<div class="indepth_pregunta_t">
 									Número de goles que se anotarán en la Copa Oro
 								</div>
-								<input type="text" name="goles_anotados" class="indepth_cuadro_text">
+								<input type="text" name="goles_anotados" class="indepth_cuadro_text indepth_num" maxlength="3" min="0" max="999" step="3">
 								<br>
 								<div class="indepth_pregunta_t">
 									Campeón goleador de la Copa Oro
 								</div>
-								<input type="text" name="goles_anotados" class="indepth_cuadro_text">
+								<input type="text" name="goleador" class="indepth_cuadro_text idepth_goleador" maxlength="40">
 								
 								<div  class="indepth_boton disable">VER RESULTADOS</div>
 							</div>
@@ -212,7 +212,7 @@
 			<div id="indepth_resultados">
 				<div class="indepth_result_cont">
 					<div class="indepth_image_tenis"></div>
-					<div class="indepth_tenis_title">Eres Bale y usas Adidas Ace </div>
+					<div class="indepth_tenis_title">Eres <span id="jugador_name"></span> y usas Adidas <span id="tenis_name"></span> </div>
 					<div class="indepth_tenis_text">
 Eres incontrolable dentro y fuera de las canchas. Actúas sin pensar, lo que más importa es aprovechar el momento, ser impredecible</div>
 				</div>
