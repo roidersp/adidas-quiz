@@ -18,7 +18,183 @@
 
 .vimeoFrame {width:638px; height:358px; overflow:hidden; margin:0 auto;}
 
+.indepth_arrow_down{
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+	background-image: url(../images/boton_flecha.png);
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: 45px auto;
+	margin: auto;
+	margin-top: 10px;
+	cursor: pointer;
+	-webkit-animation: indepth_arrow_animation 4s infinite; /* Safari 4+ */
+	-moz-animation:    indepth_arrow_animation 4s infinite; /* Fx 5+ */
+	-o-animation:      indepth_arrow_animation 4s infinite; /* Opera 12+ */
+	animation:         indepth_arrow_animation 4s infinite; 
+	position: absolute;
+	bottom:5%;
+	left: 50%;
+	margin-left: -25px;
+}
 
+#indepth_quien.iactive{
+	opacity: 1;
+}
+
+@-webkit-keyframes indepth_arrow_animation {
+  0%   { 
+	  transform:  translate(0,0px);
+	  -ms-transform: translate(0,0px); /* IE 9 */
+	  -webkit-transform: translate(0,0px);
+	  
+  }
+  15%  { 
+	  transform:  translate(0,8px);
+	  -ms-transform: translate(0,8px); /* IE 9 */
+	  -webkit-transform: translate(0,8px);
+	}
+  30%  { 
+	  transform:  translate(0,0px);
+	  -ms-transform: translate(0,0px); /* IE 9 */
+	  -webkit-transform: translate(0,0px);
+  }
+  45%  { 
+	  transform:  translate(0,8px);
+	  -ms-transform: translate(0,8px); /* IE 9 */
+	  -webkit-transform: translate(0,8px);
+  }
+  60%  { 
+	  transform:  translate(0,0px);
+	  -ms-transform: translate(0,0px); /* IE 9 */
+	  -webkit-transform: translate(0,0px);
+  }
+  100% { 
+	  transform:  translate(0,0px); 
+	  -ms-transform: translate(0,0px); /* IE 9 */
+	  -webkit-transform: translate(0,0px);
+  }
+}
+@-moz-keyframes indepth_arrow_animation {
+  0%   { 
+	  transform:  translate(0,0px);
+	  -ms-transform: translate(0,0px); /* IE 9 */
+	  -webkit-transform: translate(0,0px);
+	  
+  }
+  15%  { 
+	  transform:  translate(0,8px);
+	  -ms-transform: translate(0,8px); /* IE 9 */
+	  -webkit-transform: translate(0,8px);
+	}
+  30%  { 
+	  transform:  translate(0,0px);
+	  -ms-transform: translate(0,0px); /* IE 9 */
+	  -webkit-transform: translate(0,0px);
+  }
+  45%  { 
+	  transform:  translate(0,8px);
+	  -ms-transform: translate(0,8px); /* IE 9 */
+	  -webkit-transform: translate(0,8px);
+  }
+  60%  { 
+	  transform:  translate(0,0px);
+	  -ms-transform: translate(0,0px); /* IE 9 */
+	  -webkit-transform: translate(0,0px);
+  }
+  100% { 
+	  transform:  translate(0,0px); 
+	  -ms-transform: translate(0,0px); /* IE 9 */
+	  -webkit-transform: translate(0,0px);
+  }
+}
+@-o-keyframes indepth_arrow_animation {
+  0%   { 
+	  transform:  translate(0,0px);
+	  -ms-transform: translate(0,0px); /* IE 9 */
+	  -webkit-transform: translate(0,0px);
+	  
+  }
+  15%  { 
+	  transform:  translate(0,8px);
+	  -ms-transform: translate(0,8px); /* IE 9 */
+	  -webkit-transform: translate(0,8px);
+	}
+  30%  { 
+	  transform:  translate(0,0px);
+	  -ms-transform: translate(0,0px); /* IE 9 */
+	  -webkit-transform: translate(0,0px);
+  }
+  45%  { 
+	  transform:  translate(0,8px);
+	  -ms-transform: translate(0,8px); /* IE 9 */
+	  -webkit-transform: translate(0,8px);
+  }
+  60%  { 
+	  transform:  translate(0,0px);
+	  -ms-transform: translate(0,0px); /* IE 9 */
+	  -webkit-transform: translate(0,0px);
+  }
+  100% { 
+	  transform:  translate(0,0px); 
+	  -ms-transform: translate(0,0px); /* IE 9 */
+	  -webkit-transform: translate(0,0px);
+  }
+}
+@keyframes indepth_arrow_animation {
+  0%   { 
+	  transform:  translate(0,0px);
+	  -ms-transform: translate(0,0px); /* IE 9 */
+	  -webkit-transform: translate(0,0px);
+	  
+  }
+  15%  { 
+	  transform:  translate(0,8px);
+	  -ms-transform: translate(0,8px); /* IE 9 */
+	  -webkit-transform: translate(0,8px);
+	}
+  30%  { 
+	  transform:  translate(0,0px);
+	  -ms-transform: translate(0,0px); /* IE 9 */
+	  -webkit-transform: translate(0,0px);
+  }
+  45%  { 
+	  transform:  translate(0,8px);
+	  -ms-transform: translate(0,8px); /* IE 9 */
+	  -webkit-transform: translate(0,8px);
+  }
+  60%  { 
+	  transform:  translate(0,0px);
+	  -ms-transform: translate(0,0px); /* IE 9 */
+	  -webkit-transform: translate(0,0px);
+  }
+  100% { 
+	  transform:  translate(0,0px); 
+	  -ms-transform: translate(0,0px); /* IE 9 */
+	  -webkit-transform: translate(0,0px);
+  }
+}
+
+.indepth_cover_container{
+	display: table;
+	width: 100%;
+	height: 100%;
+}
+
+.indepth_arrow_down:hover{
+	opacity: .7;
+}
+
+.indepth_img_title{
+	width: 100%;
+	display: table-cell;
+	bottom: 50px;
+	text-align: center;
+	vertical-align: middle;
+	margin: auto;
+	
+}
 
 .indepth_pages{
 	width: 100%;
@@ -409,6 +585,10 @@
 	background-image: url(../images/Resultados/Jugadores/Suarez.jpg);
 }
 
+.j_Benzema{
+	background-image: url(../images/Resultados/Jugadores/Benzema.jpg)
+}
+
 .indepth_image_tenis{
 	width: 600px;
 	height: 300px;
@@ -470,10 +650,18 @@
 
 /*** Movil ****/
 
-@media screen and (max-width:1023px) {
+@media screen and (max-width:1024px) {
 	body{
 		width: 100%;
 		min-width: 0px;
+	}
+	
+	.vimeoFrame{
+		display: none;
+	}
+	
+	#indepth_resultados{
+		background-position: 65% 50%;
 	}
 }
 
@@ -507,307 +695,50 @@
 		background-position: 50% 0;
 	}
 	
-	.indepth_inv_item{
-		display: block;
+	.indepth_pregunta_cont{
+		width: 600px;
 	}
 	
-	#indepth_mapa{
-		width: 100%;
+	.indepth_boton{
+		float: none;
 	}
 	
-	#indepth_tabla_mapa{
-		width: 700px;
+	.indepth_pregunta_t{
+		font-size: 26px;
 	}
 	
-	.pais_title{
-		width: 80px;
+	#indepth_page6 {
+	  background-position: 80% 50%;
 	}
 	
-	.actos_title{
-		width: 200px;
+	#indepth_page4 {
+	  background-position: 10% 50%;
 	}
 	
-	.involucrados{
-		width: 200px;
+	#indepth_resultados {
+	  background-position: 70% center;
 	}
-	
-	.dinero{
-		width: 200px;
-	}
-	
-	.indepth_tabla_head_item_in{
-		  padding: 0 5px
-	}
-	
-	.inv2 .indepth_inv_item {
-	  width: 80px;
-	  padding: 0 5px;
-	}
-	
-	.inv4 .indepth_inv_item {
-		  padding: 5px;
-		  width: 90px;
-		}
-	
-	.indepth_page_infografia img{
-		width: 640px;
-	}
-
-	#info_controls img{
-		width: 100%;
-	}
-	
-	/*** dinamico **/
-	.indepth_break{
-		max-height: 700px;
-	}
-	
 	
 
 }
 
 @media screen and (max-width: 700px) {
+	.indepth_radios{
+		margin-top: 20px;
+	}
+	.indepth_pregunta_cont {
+	  width: 90%;
+	  padding: 5%;
+	}
+	
+	.indepth_radios input[type="radio"] {
+	  margin-top: 15px;
+	}
+	
+	.indepth_cuadro_text{
+		width: 90%;
+	}
 
-	.indepth_cover_back_body{
-		display: block;
-	}
-	
-	#indepth_cover .indepth_parallax_back{
-		background-image: url(../images/mobile.jpg);
-	}
-	
-	#indepth_cover .indepth_parallax_back{
-		background-size: 100% auto;
-		background-position: 50% 50%;
-	}
-	
-	#indepth_tabla_mapa , #indepth_mapa{
-		display: none;
-	}
-	
-	#indepth_tabla_paises{
-		display: table;
-		width: 100%;
-	}
-	
-	.indepth_tabla_title{
-		color: white;
-		text-transform: uppercase;
-		font-size: 24px;
-		margin: auto;
-		text-align: center;
-		border-bottom: 3px solid white;
-		display: table;
-		padding: 3px 10px;
-	}
-	
-	.indepth_tabla_title span{
-		color: #c1c1c1;
-	}
-	
-	#indepth_tabla_paises_cont{
-		display: table;
-		width: 310px;
-		margin: 20px auto;
-		position: relative;
-	}
-	
-	.indepth_tabla_paises_item{
-		width: 150px;
-		padding: 2.5px;
-		height: 60px;
-		float: left;
-		margin-bottom: 20px;
-	}
-	
-	.indepth_logo_pais{
-		float: left;
-		width: 50px;
-		height: 50px;
-	}
-	
-	.indepth_logo_pais img{
-		width: 100%;
-	}
-	
-	.indepth_tabla_pais_nombre{
-		height: 50px;
-		display: table;
-		max-width: 90px;
-		
-	}
-	
-	.indepth_tabla_pais_nombre_in{
-		display: table-cell;
-		vertical-align: middle;
-		color: white;
-		padding: 0 7px;
-		font-size: 12px;
-		text-transform: uppercase;
-	}
-	
-	#indepth_tarjeta_pais{
-		background: black;
-		position: fixed;
-		left: 0;
-		top: 0;
-		display: none;
-	}
-	
-	#indepth_page2{
-		position: relative;
-		z-index: 1;
-	}
-	
-	.indepth_tarjeta_cont{
-		width: 320px;
-		height: 100%;
-		margin: auto;
-		display: table;
-	}
-	
-	.indepth_tarjeta_cont_in{
-		display: table-cell;
-		vertical-align: middle;
-	}
-	
-	.indepth_tarjeta_head{
-		display: table;
-	}
-	
-	#indepth_tarjeta_pais_logo{
-		width: 60px;
-		height: 40px;
-		float: left;
-	}
-	
-	#indepth_tarjeta_pais_logo img{
-		width: 100%;
-	}
-	
-	#indepth_tarjeta_pais_nombre{
-		color: white;
-		float: left;
-		height: 40px;
-		width: 220px;
-		line-height: 40px;
-		margin-left: 10px;
-		border-bottom: 1px solid white;
-		
-	}
-	.indepth_tarjeta_x{
-		width: 30px;
-		height: 40px;
-		background-image: url(../images/mapa_equis.svg);
-		background-position: left top;
-		background-repeat: no-repeat;
-		float: right;
-		border-bottom: 1px solid white;
-		background-size: 90%;
-	}
-	
-	.indepth_tarjeta_involucrados{
-		width: 100%;
-		height: 180px;
-		display: table;
-	}
-	
-	.indepth_tarjeta_involucrado_in{
-		display: table-cell;
-		vertical-align: middle;
-		text-align: center;
-	}
-	
-	.indepth_inv_cont{
-		color: white;
-	}
-	
-	.inv2 .indepth_inv_item {
-	  width: 100px;
-	  padding: 0 10px;
-	  color: white;
-	}
-	
-	.indepth_inv_item{
-		float: left;
-		color: white;
-	}
-	
-	.inv4 .indepth_inv_item img{
-		width: 60%;
-	}
-	
-	.inv4 .indepth_inv_item{
-		width: 120px;
-	}
-	
-	.indepth_inv_text{
-		font-size: 12px;
-	}
-	
-	.indepth_tarjeta_actos{
-		height: 120px;
-		width: 100%;
-		border-bottom: 1px solid white;
-		border-top: 1px solid white;
-		padding: 10px 0px;
-		color: white;
-		text-align: center;
-	}
-	
-	.indepth_actos_title{
-		text-transform: uppercase;
-		font-weight: 600;
-		font-size: 14px;
-		padding: 0 10px;
-	}
-	
-	.indepth_actos_text{
-		font-size: 14px;
-		margin-top: 5px;
-		padding: 0 15px;
-	}
-	
-	.indepth_tarjeta_fleachas{
-		width: 80%;
-		margin: 10px auto;
-		height: 30px;
-		
-	}
-	
-	.indepth_flecha_izq{
-		width: 30px;
-		height: 100%;
-		float: left;
-		background-image: url(../images/flecha_izquierda.svg);
-		background-repeat: no-repeat;
-		background-position: center center;
-	}
-	
-	.indepth_flecha_der{
-		width: 30px;
-		height: 100%;
-		float: right;
-		background-repeat: no-repeat;
-		background-image: url(../images/flecha_derecha.svg);
-		background-position: center center;
-	}
-	
-	#tarjeta_dinero{
-		height: 60px;
-	}
-	
-	.indepth_inv_cont.inv4{
-		width: 260px;
-	}
-	
-	#indepth_cover .indepth_parallax_back{
-		background-size: auto 100%;
-	}
-	
-	#indepth_cover .indepth_parallax_back{
-		background-image: url(../images/mobile.jpg);
-	}
 }
 
 @media screen and (max-width: 605px) {
@@ -858,63 +789,34 @@
 		height: 540px;	
 	}
 	
+	.indepth_image_tenis{
+		width: 90%;
+		height: 200px;
+	}
+	
+	.indepth_tenis_text{
+		width: 90%;
+	}
+	
 
-
-	
-	#indepth_cover .indepth_title{
-		width: 100%;
-		font-size: 26px;
-		margin-top: 0px;
-	}
-	
-	#indepth_cover .indepth_cover_back_body{
-		top:240px;
-	}
-	
-	.indepth_break {
-		height: auto;
-		width: 100%;
-		height: 380px;
-	}
-	
-	.indepth_break .indepth_parallax_back {
-		background-size: auto 100%;
-	}
-	.indepth_break .indepth_parallax_back .indepth_text_container{
-		padding: 10px 10px;
-		float: left;
-	}
 	
 	}
 	
 @media screen and (max-width: 360px) {
 
 	
-	#indepth_break_2 .indepth_text_container{
-		background-color: rgba(149, 149, 149, 0.7);
-}
+
 }
 
 @media screen and (max-height: 414px) {
-	
-	.indepth_break{
-		height: 600px;
+	.indepth_image_tenis{
+		width: 200px;
+		height: 150px;
 	}
 	
-	#indepth_break_5{
-		height: 300px;
+	.indepth_tenis_text{
+		width: 90%;
 	}
-	
-	#indepth_cover {
-height: 362px;
-}
-#indepth_cover .indepth_cover_back_body {
-top: 160px;
-}
-
-#indepth_cover .indepth_title {
-font-size: 25px;
-}
 
 }
 
