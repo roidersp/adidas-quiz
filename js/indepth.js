@@ -73,54 +73,7 @@ var indepth_comprobar = function(){
 	}
 }
 
-$("#indepth_resultados").css({
-	"width":ventana_ancho+"px",
-	"height":ventana_alto+"px"
-});
 
-$(".indepth_boton").click(function(){
-	if(!disable){
-		
-		var fornm_t= $('form').serializeArray();
-		$.each(fornm_t, function(i,pregunta){
-			if(i>2 && i<6){
-				jugadores_num[pregunta["value"]]=parseInt(jugadores_num[pregunta["value"]])+1;
-			}
-		});
-		
-		var ord_jug=null;
-		
-		var listKeys = [];
-		for(x in jugadores_num) listKeys.push(x);
-		console.log(listKeys); 
-		
-		for(i=0;i<listKeys.length;i++){
-			if(ord_jug==null){
-				ord_jug=listKeys[i];
-			}else{
-				if(jugadores_num[listKeys[i]]>jugadores_num[ord_jug]){
-					ord_jug=listKeys[i];
-				}
-			}
-			
-		}
-		
-		
-		
-		$("#indepth_resultados").addClass("j_"+ord_jug);
-		$("#jugador_name").html(jugadores_nombres[ord_jug]);
-		
-		
-		$(".indepth_tenis_text").html(jugadores_descripcion[ord_jug]);
-		
-		
-		$("#indepth_resultados").css("position","fixed");
-		
-		$.fn.fullpage.MoveTo(1,0);
-		
-	}
-	
-	});
 
 $(".indepth_tenis input[type=radio]").on("change",function(){
 	if($(".indepth_tenis input[name=pregunta1]").is(":checked") && $(".indepth_tenis input[name=pregunta2]").is(":checked") && $(".indepth_tenis input[name=pregunta3]").is(":checked")){
@@ -250,6 +203,50 @@ $(document).ready(function(){
             
         }
     });
+    $("#indepth_resultados").css({
+	"width":ventana_ancho+"px",
+	"height":ventana_alto+"px"
+});
+
+$(".indepth_boton").click(function(){
+	
+	if(!disable){
+		var fornm_t= $('form').serializeArray();
+		$.each(fornm_t, function(i,pregunta){
+			if(i>2 && i<6){
+				jugadores_num[pregunta["value"]]=parseInt(jugadores_num[pregunta["value"]])+1;
+			}
+		});
+		
+		var ord_jug=null;
+		
+		var listKeys = [];
+		for(x in jugadores_num) listKeys.push(x);
+		console.log(listKeys); 
+		
+		for(i=0;i<listKeys.length;i++){
+			if(ord_jug==null){
+				ord_jug=listKeys[i];
+			}else{
+				if(jugadores_num[listKeys[i]]>jugadores_num[ord_jug]){
+					ord_jug=listKeys[i];
+				}
+			}
+			
+		}
+
+		$("#indepth_resultados").addClass("j_"+ord_jug);
+		$("#jugador_name").html(jugadores_nombres[ord_jug]);
+		
+		$(".indepth_tenis_text").html(jugadores_descripcion[ord_jug]);
+		
+		$("#indepth_resultados").css("position","fixed");
+		
+		$.fn.fullpage.moveTo("cover");
+		
+	}
+	
+	});
 });
 
 

@@ -365,16 +365,16 @@
 }
 
 #indepth_resultados{
-	
+	background-color: black;
 	background-size: cover;
 	background-repeat: no-repeat;
 	display: table;
+	background-position: right center;
 }
 
 .j_Bale{
 	background-image: url(../images/Resultados/Jugadores/Bale.jpg);
 }
-
 .j_Ozil{
 	background-image: url(../images/Resultados/Jugadores/Ozil.jpg);
 }
@@ -396,8 +396,6 @@
 .j_Suarez{
 	background-image: url(../images/Resultados/Jugadores/Suarez.jpg);
 }
-
-
 
 .indepth_image_tenis{
 	width: 600px;
