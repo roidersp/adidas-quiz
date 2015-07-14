@@ -598,12 +598,20 @@
 	margin: auto;
 }
 
-.m_ace{
+.m_ace .indepth_image_tenis{
 	background-image: url(../images/Resultados/Ace.png);
 }
 
-.m_x{
+.m_x .indepth_image_tenis{
 	background-image: url(../images/Resultados/X.png);
+}
+
+.m_x{
+	color: #000;
+}
+
+.m_ace{
+	color: #dfdfdf;
 }
 
 .indepth_result_cont{
@@ -617,20 +625,29 @@
 	font-size: 30px;
 	text-align: center;
 	font-style: italic;
-	color: white;
 	margin-top: 20px;
 }
 
 .indepth_tenis_text{
 	font-family: 'Roboto';
 	font-size: 18px;
-	color: #dfdfdf;
+	
 	width: 690px;
 	text-align: center;
 	margin: auto;
 	margin-top: 30px;
 }
 
+
+#indepth_return{
+	width: 30px;
+	height: 30px;
+	background-color: rgba(158, 158, 158, 0.71);
+	position: absolute;
+	top: 15px;
+	left: 15px;
+	display: none;
+}
 @media screen and (min-width: 1920px) {
 
 }

@@ -31,6 +31,29 @@ $('.indepth_num').keydown(function(event) {
 
 });
 
+$(document).on("click","#indepth_return",function(){
+	$(" input:radio").attr("checked", false);	
+	$('#indepth_container').fullpage({
+		anchors: ['cover','pregunta1','pregunta2','pregunta3','pregunta4','pregunta5','pregunta6','pregunta7'],
+	    scrollOverflow: true,
+	    scrollbar: true,
+	    slideSelector: '.section',
+	    slidesNavigation: false,
+	    controlArrows: false,
+	    scrollingSpeed: 1000,
+	    afterLoad: function(anchorLink, index){
+
+            
+        }
+    });
+
+	$(this).hide();
+	$("input:text").val('');	
+	disable=true;
+	$(".indepth_boton").addClass("disable");
+	$("#indepth_resultados").css("position","initial");
+});
+
 $('.indepth_num').keyup(function(event) {
 	
 	if(parseInt($(".indepth_num").val())>0){
@@ -91,7 +114,7 @@ $(".indepth_tenis input[type=radio]").on("change",function(){
 				}
 				$(".adidas_ace").css("display","block");
 					$(".adidas_x").css("display","none");
-					$(".indepth_image_tenis").addClass("m_ace");
+					$("#indepth_resultados").addClass("m_ace");
 					$("#tenis_name").html("Ace");
 					active_ace=true;
 				
@@ -104,7 +127,7 @@ $(".indepth_tenis input[type=radio]").on("change",function(){
 				}
 				$(".adidas_x").css("display","block");
 					$(".adidas_ace").css("display","none");
-					$(".indepth_image_tenis").addClass("m_x");
+					$("#indepth_resultados").addClass("m_x");
 					$("#tenis_name").html("X");
 					active_ace=false;
 			}
@@ -201,7 +224,7 @@ $(document).ready(function(){
 	})
 		loadDisqus($("#indepth_coments"),disqus_url, "http://juanfutbol.com/indepth/"+disqus_url);
 		
-		$('#indepth_container').fullpage({
+	$('#indepth_container').fullpage({
 		anchors: ['cover','pregunta1','pregunta2','pregunta3','pregunta4','pregunta5','pregunta6','pregunta7'],
 	    scrollOverflow: true,
 	    scrollbar: true,
@@ -252,9 +275,10 @@ $(".indepth_boton").click(function(){
 		$(".indepth_tenis_text").html(jugadores_descripcion[ord_jug]);
 		
 		$("#indepth_resultados").css("position","fixed");
+		$("#indepth_return").show();
 		
 		$.fn.fullpage.moveTo("cover");
-		$.fn.fullpage.destroy();
+		$.fn.fullpage.destroy("all");
 		
 		$("body").css({
 			height:"100%",
@@ -276,7 +300,6 @@ $(".indepth_boton").click(function(){
 			}
 		});
 		
-		console.log(v);
 	}
 	
 	});
