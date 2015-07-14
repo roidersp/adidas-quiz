@@ -707,10 +707,7 @@
 		width: 100%;
 	}
 	
-	#indepth_cover .indepth_parallax_back{
-		background-size: auto 800px;
-		background-position: 50% 0;
-	}
+
 	
 	.indepth_pregunta_cont{
 		width: 600px;
@@ -739,7 +736,7 @@
 
 }
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 760px) {
 	.indepth_radios{
 		margin-top: 20px;
 	}
@@ -754,6 +751,11 @@
 	
 	.indepth_cuadro_text{
 		width: 90%;
+	}
+	
+	#indepth_cover .indepth_parallax_back{
+		background-image: url(../images/Portada/Portada_movil.jpg);
+		background-position: center center;
 	}
 
 }
