@@ -6,7 +6,7 @@ var disqus_per_page=3;
 var tamaño_total=1920;
 var num_carrusel=0;
 var tenis_data={"x":0,"ace":0};
-var jugadores_num={"Ozil":0,"James":0,"Xabi":0,"Rakitic":0,"Layun":0,"Bale":0,"Muller":0,"Benzema":0,"Suarez":0};
+var jugadores_num={"Ozil":0,"Guardado":0,"Xabi":0,"Rakitic":0,"Layun":0,"Bale":0,"Muller":0,"Benzema":0,"Suarez":0};
 var ventana_alto = $(window).height();
 var ventana_ancho = $(window).width();
 var disable=true;
@@ -15,8 +15,8 @@ var input_text=false;
 var input_goles=false;
 var input_radio=false;
 
-var jugadores_nombres={"Ozil":"Ozil","James":"James","Xabi":"Xabi Alonso","Rakitic":"Rakitic","Layun":"Miguel Layún","Bale":"Bale","Muller":"Muller","Benzema":"Benzema","Suarez":"Suárez"};
-var jugadores_descripcion={"Ozil":"Eres un digno dominador del juego. Tímido y callado, pero no te impide demostrar talento. Tú calidad nunca estará en duda. Sabes dominar un chicle con los pies.","James":"Posees un toque privilegiado. Asistes y anotas cuando las circunstancias lo requieren. Eres atrevido, te gusta tener el control.","Xabi":"Eres líder y solidario, te gusta repartir el juego. Garra, pasión y elegancia definen tu personalidad dentro y fuera del campo.","Rakitic":"Eres la brújula de tu equipo. Posees una visión total de las circunstancias y sabes resolverlas. Tu trabajo defensivo no merma tu olfato goleador. Nadie te detiene.","Layun":"Miguel Layún","Bale":"Eres incontrolable dentro y fuera de las canchas. Actúas sin pensar, lo que más importa es aprovechar el momento, ser impredecible.","Muller":"Te gusta ser el centro de atención. Nadie te dice qué hacer, te gusta dominar al rival. Nunca te rindes, eres un ganador por naturaleza.","Benzema":"Eres incontrolable e inconfundible. Extrovertido, clase y lujo se nota en tus movimientos y pases. Tu debilidad, los autos y las mujeres.","Suarez":"Eres un killer. Los enemigos padecen tu olfato goleador y tus mordidas. Personalidad de fuego. No importan las formas, siempre buscas vencer a tu rival."};
+var jugadores_nombres={"Ozil":"Ozil","Guardado":"Guardado","Xabi":"Xabi Alonso","Rakitic":"Rakitic","Layun":"Miguel Layún","Bale":"Bale","Muller":"Muller","Benzema":"Benzema","Suarez":"Suárez"};
+var jugadores_descripcion={"Ozil":"Eres un digno dominador del juego. Tímido y callado, pero no te impide demostrar talento. Tú calidad nunca estará en duda. Sabes dominar un chicle con los pies.","Guardado":"Posees un toque privilegiado. Asistes y anotas cuando las circunstancias lo requieren. Eres atrevido, te gusta tener el control.","Xabi":"Eres líder y solidario, te gusta repartir el juego. Garra, pasión y elegancia definen tu personalidad dentro y fuera del campo.","Rakitic":"Eres la brújula de tu equipo. Posees una visión total de las circunstancias y sabes resolverlas. Tu trabajo defensivo no merma tu olfato goleador. Nadie te detiene.","Layun":"Miguel Layún","Bale":"Eres incontrolable dentro y fuera de las canchas. Actúas sin pensar, lo que más importa es aprovechar el momento, ser impredecible.","Muller":"Te gusta ser el centro de atención. Nadie te dice qué hacer, te gusta dominar al rival. Nunca te rindes, eres un ganador por naturaleza.","Benzema":"Eres incontrolable e inconfundible. Extrovertido, clase y lujo se nota en tus movimientos y pases. Tu debilidad, los autos y las mujeres.","Suarez":"Eres un killer. Los enemigos padecen tu olfato goleador y tus mordidas. Personalidad de fuego. No importan las formas, siempre buscas vencer a tu rival."};
 
 $('.indepth_num').keydown(function(event) {
 	// Allow special chars + arrows 
