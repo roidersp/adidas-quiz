@@ -597,6 +597,10 @@
 	background-image: url(../images/Resultados/Jugadores/Benzema.jpg)
 }
 
+.j_Guardado{
+	background-image: url(../images/Resultados/Jugadores/Guardado.jpg)
+}
+
 .indepth_image_tenis{
 	width: 600px;
 	height: 300px;
@@ -656,6 +660,10 @@
 	top: 15px;
 	left: 15px;
 	display: none;
+	background-image: url(../images/Billboard/Reset.png);
+	background-repeat: no-repeat;
+	background-size: 96%;
+	background-position: center center;
 }
 
 .indepth_concurso_text{
@@ -866,7 +874,22 @@
 	}
 	
 @media screen and (max-width: 360px) {
+.indepth_concurso_text{
+	font-size: 18px;
+}
 
+.indepth_tenis_title{
+	font-size: 28px;
+}
+
+.indepth_tenis_text{
+	margin-top: 5px;
+}
+
+.indepth_image_tenis {
+  width: 90%;
+  height: 100px;
+}
 	
 
 }

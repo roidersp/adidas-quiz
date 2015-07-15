@@ -33,6 +33,15 @@ $('.indepth_num').keydown(function(event) {
 
 $(document).on("click","#indepth_return",function(){
 	$(" input:radio").attr("checked", false);	
+	$("#indepth_resultados").removeClass();
+	tenis_data={"x":0,"ace":0};
+	jugadores_num={"Ozil":0,"Guardado":0,"Xabi":0,"Rakitic":0,"Layun":0,"Bale":0,"Muller":0,"Benzema":0,"Suarez":0};
+	input_text=false;
+	input_goles=false;
+	input_radio=false;
+	console.log("---");
+	console.log(jugadores_num);
+	
 	$('#indepth_container').fullpage({
 		anchors: ['cover','pregunta1','pregunta2','pregunta3','Adidas','pregunta4','pregunta5','pregunta6','pregunta7'],
 	    scrollOverflow: true,
@@ -42,7 +51,6 @@ $(document).on("click","#indepth_return",function(){
 	    controlArrows: false,
 	    scrollingSpeed: 1000,
 	    afterLoad: function(anchorLink, index){
-
             
         }
     });
@@ -76,7 +84,7 @@ $(document).on("change","input:radio",function(){
 });
 
 $('.idepth_goleador').keyup(function(event) {
-	if($(this).val()!=""){
+	if($(this).val()!="" ){
 		input_text=true;
 	}else{
 		input_text=false;
@@ -87,6 +95,10 @@ $('.idepth_goleador').keyup(function(event) {
 
 
 var indepth_comprobar = function(){
+	console.log("text:" +input_text);
+	console.log("radio:" +input_radio);
+	console.log("goles:" +input_goles);
+	console.log("-----");
 	if(input_text && input_radio && input_goles){
 		$(".indepth_boton").removeClass("disable");
 		disable=false;
@@ -245,6 +257,7 @@ $(document).ready(function(){
 $(".indepth_boton").click(function(){
 	
 	if(!disable){
+		console.log(tenis_data);
 		var fornm_t= $('form').serializeArray();
 		$.each(fornm_t, function(i,pregunta){
 			if(i>2 && i<6){
@@ -313,5 +326,26 @@ $(".indepth_boton").click(function(){
 		$.fn.fullpage.moveSectionDown();
 	});
 });
+
+$(window).on("resize", function(){
+	
+	 var ventana_alto = $(window).height();
+	var ventana_ancho = $(window).width();
+	
+	$(".vimeoFrame").css({
+		"width": (ventana_ancho)+"px",
+		"height": (ventana_alto-0)+"px"	
+	});
+	
+	$(".vimeo").css({
+		"width": (ventana_ancho+150)+"px",
+		"height": (ventana_alto+120)+"px"	
+	})
+	 $("#indepth_resultados").css({
+	"width":ventana_ancho+"px",
+	"height":ventana_alto+"px"
+});
+	 
+	 });
 
 
