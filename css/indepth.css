@@ -19,6 +19,10 @@
 	margin-left: -75px;
 }
 
+#indepth_pageBillboard{
+	background-image: url(../images/Billboard/Billboard_junto.jpg);
+}
+
 .vimeoFrame {width:638px; height:358px; overflow:hidden; margin:0 auto;}
 
 .indepth_arrow_down{

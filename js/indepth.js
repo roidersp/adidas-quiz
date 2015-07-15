@@ -34,7 +34,7 @@ $('.indepth_num').keydown(function(event) {
 $(document).on("click","#indepth_return",function(){
 	$(" input:radio").attr("checked", false);	
 	$('#indepth_container').fullpage({
-		anchors: ['cover','pregunta1','pregunta2','pregunta3','pregunta4','pregunta5','pregunta6','pregunta7'],
+		anchors: ['cover','pregunta1','pregunta2','pregunta3','Adidas','pregunta4','pregunta5','pregunta6','pregunta7'],
 	    scrollOverflow: true,
 	    scrollbar: true,
 	    slideSelector: '.section',
@@ -225,7 +225,7 @@ $(document).ready(function(){
 		loadDisqus($("#indepth_coments"),disqus_url, "http://juanfutbol.com/indepth/"+disqus_url);
 		
 	$('#indepth_container').fullpage({
-		anchors: ['cover','pregunta1','pregunta2','pregunta3','pregunta4','pregunta5','pregunta6','pregunta7'],
+		anchors: ['cover','pregunta1','pregunta2','pregunta3','Adidas','pregunta4','pregunta5','pregunta6','pregunta7'],
 	    scrollOverflow: true,
 	    scrollbar: true,
 	    slideSelector: '.section',
