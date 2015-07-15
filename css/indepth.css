@@ -478,6 +478,7 @@
 	font-size: 28px;
 	color: #fff;
 	font-weight: 700;
+	font-family: 'Roboto Condensed';
 }
 
 .indepth_pregunta_cont{
@@ -780,10 +781,10 @@
 	  background-position: 70% center;
 	}
 	
-
+		
 }
 
-@media screen and (max-width: 760px) {
+@media screen and (max-width: 768px) {
 	.indepth_radios{
 		margin-top: 20px;
 	}
@@ -803,6 +804,10 @@
 	#indepth_cover .indepth_parallax_back{
 		background-image: url(../images/Portada/Portada_movil.jpg);
 		background-position: center center;
+	}
+	
+	#indepth_pageBillboard{
+		background-image: url(../images/Billboard/Billboard_movil.jpg);
 	}
 
 }
