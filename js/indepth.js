@@ -226,8 +226,8 @@ function bgadj(){
            
            
          
-        var videoActualWidth = $("#indepth_video").width();
-        var videoActualHeight = $("#video1").offsetHeight;
+        var videoActualWidth = $("#video1").width();
+        var videoActualHeight = $("#video1").height();
         
         console.log(videoActualWidth);
               
@@ -244,7 +244,7 @@ function bgadj(){
                 var ajuste = (window.innerWidth - videoActualWidth)/2;
 				console.log(ajuste);
                 
-                $("#video").css("left",ajuste+"px");          
+                $("#video1").css("margin-left",ajuste+"px");          
             }
           
         }
@@ -262,7 +262,6 @@ function bgadj(){
 $(document).ready(function(){
 	 $("#video1").css( "height",window.innerHeight ? window.innerHeight : $(window).height());
 	
-	indepth_sizeAdjust(true);
 	indepth_preloadImgs();
 	 var ventana_alto = $(window).height();
 	var ventana_ancho = $(window).width();
@@ -281,14 +280,16 @@ $(document).ready(function(){
 	$('#indepth_container').fullpage({
 		anchors: ['cover','pregunta1','pregunta2','pregunta3','Adidas','pregunta4','pregunta5','pregunta6','pregunta7'],
 	    scrollOverflow: true,
-	    scrollbar: true,
+	    scrollbar: false,
 	    slideSelector: '.section',
 	    slidesNavigation: false,
 	    controlArrows: false,
 	    scrollingSpeed: 1000,
-	    afterLoad: function(anchorLink, index){
+	    scrollOverflow:false,
+	    afterRender: function(anchorLink, index){
 
-            
+            bgadj();
+            $('video').get(0).play();
         }
     });
     $("#indepth_resultados").css({
@@ -368,13 +369,12 @@ $(".indepth_boton").click(function(){
 		$.fn.fullpage.moveSectionDown();
 	});
 	
-	bgadj();
 	
 });
 
 
 $(window).on("resize", function(){
-	
+	bgadj();
 	 var ventana_alto = $(window).height();
 	var ventana_ancho = $(window).width();
 	
