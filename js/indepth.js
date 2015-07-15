@@ -268,6 +268,11 @@ $(".indepth_boton").click(function(){
 			}
 			
 		}
+		
+		var text_tweet="goles: "+$("input[name=goles_anotados]").val()+" goleador: "+$("input[name=goleador]").val();
+		var tweet_url="https://twitter.com/intent/tweet?url=http%3A%2F%2Froidersp.github.io%2Fadidas-quiz%2F&related=juanfutbol,adidasMX&hashtags=test&text="+encodeURIComponent(text_tweet);
+		
+		$("#link_tweet").attr("href",tweet_url);
 
 		$("#indepth_resultados").addClass("j_"+ord_jug);
 		$("#jugador_name").html(jugadores_nombres[ord_jug]);

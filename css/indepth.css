@@ -1,3 +1,6 @@
+.player .video-wrapper {
+	background: transparent;
+}
 
 #nav-bar-wrapper{
 	display: none;
@@ -617,6 +620,7 @@
 .indepth_result_cont{
 	display: table-cell;
 	vertical-align: middle;
+	text-align: center;
 }
 
 .indepth_tenis_title{
@@ -648,6 +652,45 @@
 	left: 15px;
 	display: none;
 }
+
+.indepth_concurso_text{
+	max-width: 690px;
+	width: 90%;
+	font-family: 'Roboto';
+	font-weight: 600;
+	font-size: 20px;
+	margin: auto;
+	margin-top: 20px;
+	
+}
+
+.indepth_concurso_boton{
+	width: 112px;
+	height: 42px;
+	margin: auto;
+	background-image: url(../images/Twitter.png);
+	margin-top: 10px;
+}
+
+.indepth_concurso_seguir{
+	max-width: 690px;
+	width: 90%;
+	font-family: 'Roboto';
+	font-size: 16px;
+	margin: auto;
+	margin-top: 5px;
+	
+}
+
+.indepth_concurso_seguir a{
+	font-family: 'Roboto';
+	font-size: 16px;
+	font-style: italic;
+	text-decoration: none;
+	color: #caff71;
+	
+}
+
 @media screen and (min-width: 1920px) {
 
 }
