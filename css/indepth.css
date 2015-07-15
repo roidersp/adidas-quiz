@@ -10,6 +10,17 @@
 	display: none;
 }
 
+#indepth_video{
+
+     min-height: 100%;
+     display: table;
+}
+
+#video1 {
+   height: 100%;
+   width: auto;
+}
+
 .vimeo{
 	display:block;
 	width:638px;
@@ -283,6 +294,7 @@
 	background-position: 50% 50%;
 	background-color: white;
 	background-size: cover;
+	position: relative;
 }
 
 #indepth_cover .indepth_cover_back_body{

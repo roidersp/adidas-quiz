@@ -219,7 +219,49 @@ if (window.DISQUS) {
 };
 
 
+function bgadj(){
+         
+          $("#video").css( "width"," auto");
+          
+           
+           
+         
+        var videoActualWidth = $("#indepth_video").width();
+        var videoActualHeight = $("#video1").offsetHeight;
+        
+        console.log(videoActualWidth);
+              
+        var ratio =  videoActualWidth / videoActualHeight;  
+        
+        console.log(ratio);       
+         
+        if ((window.innerWidth / window.innerHeight) < ratio){
+          console.log("true");
+           
+              
+            if (videoActualWidth > window.innerWidth){
+              
+                var ajuste = (window.innerWidth - videoActualWidth)/2;
+				console.log(ajuste);
+                
+                $("#video").css("left",ajuste+"px");          
+            }
+          
+        }
+        else{ 
+          console.log("false");
+            video.setAttribute("style", "width: 100%");
+            video.setAttribute("style", "height: auto");
+            video.setAttribute("style", "left: 0");
+  
+        }
+          
+    }
+
+
 $(document).ready(function(){
+	 $("#video1").css( "height",window.innerHeight ? window.innerHeight : $(window).height());
+	
 	indepth_sizeAdjust(true);
 	indepth_preloadImgs();
 	 var ventana_alto = $(window).height();
@@ -325,7 +367,11 @@ $(".indepth_boton").click(function(){
 	$(document).on("click", "#indepth_button_ver" ,function(){
 		$.fn.fullpage.moveSectionDown();
 	});
+	
+	bgadj();
+	
 });
+
 
 $(window).on("resize", function(){
 	
