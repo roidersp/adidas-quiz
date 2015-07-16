@@ -31,6 +31,15 @@ $('.indepth_num').keydown(function(event) {
 
 });
 
+$(document).on({
+	mouseenter: function(){
+		$(".indepth_loquiero_cuadro").show();
+	},
+	mouseleave: function(){
+		$(".indepth_loquiero_cuadro").hide();
+	}
+},".indepth_lo_quiero_cont")
+
 $(document).on("click","#indepth_return",function(){
 	$(" input:radio").attr("checked", false);	
 	$("#indepth_resultados").removeClass();
