@@ -1,4 +1,4 @@
-var hashtags={"ace":"AdidasAce","x":"AdidasX"};
+var hashtags={"ace":"AdidasAce,JuanyAdidas","x":"AdidasX,JuanyAdidas"};
 
 var texto_tweet="";
 
@@ -315,7 +315,7 @@ $(".indepth_boton").click(function(){
 		
 			
 		
-		var text_tweet=texto_tweet+goles: "+$("input[name=goles_anotados]").val()+" goleador: "+$("input[name=goleador]").val();
+		var text_tweet=texto_tweet+"goles: "+$("input[name=goles_anotados]").val()+" goleador: "+$("input[name=goleador]").val();
 		
 		var tweet_url="https://twitter.com/intent/tweet?url=http%3A%2F%2Froidersp.github.io%2Fadidas-quiz%2F&related=juanfutbol,adidasMX&hashtags="+ht_tweet+"&text="+encodeURIComponent(text_tweet);
 		
