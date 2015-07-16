@@ -1,10 +1,25 @@
-var disqus_shortname = 'juanfutbol';
-var disqus_identifier;
-var disqus_url="eb9e0a21-b911-430e-9591-57d10d52a9e2";
-var disqus_number_c=2;
-var disqus_per_page=3;
+var hashtags={"ace":"AdidasAce","x":"AdidasX"};
+
+var texto_tweet="";
+
+var url_adidas={"ace":"http://www.adidas.mx/ace","x":"http://www.adidas.mx/x"};
+
+var jugadores_nombres={"Ozil":"Ozil","Guardado":"Guardado","Xabi":"Xabi Alonso","Rakitic":"Rakitic","Layun":"Miguel Layún","Bale":"Bale","Muller":"Muller","Benzema":"Benzema","Suarez":"Suárez"};
+
+var jugadores_descripcion={
+	"Ozil":"Eres un digno dominador del juego. Tímido y callado, pero no te impide demostrar talento. Tú calidad nunca estará en duda. Sabes dominar un chicle con los pies.",
+	"Guardado":"Posees un toque privilegiado. Asistes y anotas cuando las circunstancias lo requieren. Eres atrevido, te gusta tener el control.",
+	"Xabi":"Eres líder y solidario, te gusta repartir el juego. Garra, pasión y elegancia definen tu personalidad dentro y fuera del campo.",
+	"Rakitic":"Eres la brújula de tu equipo. Posees una visión total de las circunstancias y sabes resolverlas. Tu trabajo defensivo no merma tu olfato goleador. Nadie te detiene.",
+	"Layun":"Miguel Layún","Bale":"Eres incontrolable dentro y fuera de las canchas. Actúas sin pensar, lo que más importa es aprovechar el momento, ser impredecible.",
+	"Muller":"Te gusta ser el centro de atención. Nadie te dice qué hacer, te gusta dominar al rival. Nunca te rindes, eres un ganador por naturaleza.",
+	"Benzema":"Eres incontrolable e inconfundible. Extrovertido, clase y lujo se nota en tus movimientos y pases. Tu debilidad, los autos y las mujeres.",
+	"Suarez":"Eres un killer. Los enemigos padecen tu olfato goleador y tus mordidas. Personalidad de fuego. No importan las formas, siempre buscas vencer a tu rival."
+	};
+
+
+
 var tamaño_total=1920;
-var num_carrusel=0;
 var tenis_data={"x":0,"ace":0};
 var jugadores_num={"Ozil":0,"Guardado":0,"Xabi":0,"Rakitic":0,"Layun":0,"Bale":0,"Muller":0,"Benzema":0,"Suarez":0};
 var ventana_alto = $(window).height();
@@ -14,9 +29,10 @@ var active_ace=false;
 var input_text=false;
 var input_goles=false;
 var input_radio=false;
+var tenis_name="";
 
-var jugadores_nombres={"Ozil":"Ozil","Guardado":"Guardado","Xabi":"Xabi Alonso","Rakitic":"Rakitic","Layun":"Miguel Layún","Bale":"Bale","Muller":"Muller","Benzema":"Benzema","Suarez":"Suárez"};
-var jugadores_descripcion={"Ozil":"Eres un digno dominador del juego. Tímido y callado, pero no te impide demostrar talento. Tú calidad nunca estará en duda. Sabes dominar un chicle con los pies.","Guardado":"Posees un toque privilegiado. Asistes y anotas cuando las circunstancias lo requieren. Eres atrevido, te gusta tener el control.","Xabi":"Eres líder y solidario, te gusta repartir el juego. Garra, pasión y elegancia definen tu personalidad dentro y fuera del campo.","Rakitic":"Eres la brújula de tu equipo. Posees una visión total de las circunstancias y sabes resolverlas. Tu trabajo defensivo no merma tu olfato goleador. Nadie te detiene.","Layun":"Miguel Layún","Bale":"Eres incontrolable dentro y fuera de las canchas. Actúas sin pensar, lo que más importa es aprovechar el momento, ser impredecible.","Muller":"Te gusta ser el centro de atención. Nadie te dice qué hacer, te gusta dominar al rival. Nunca te rindes, eres un ganador por naturaleza.","Benzema":"Eres incontrolable e inconfundible. Extrovertido, clase y lujo se nota en tus movimientos y pases. Tu debilidad, los autos y las mujeres.","Suarez":"Eres un killer. Los enemigos padecen tu olfato goleador y tus mordidas. Personalidad de fuego. No importan las formas, siempre buscas vencer a tu rival."};
+
+
 
 $('.indepth_num').keydown(function(event) {
 	// Allow special chars + arrows 
@@ -133,6 +149,7 @@ $(".indepth_tenis input[type=radio]").on("change",function(){
 				if(!active_ace){
 					$(".indepth_jugadores input:radio").attr("checked", false);
 				}
+				tenis_name="ace";
 				$(".adidas_ace").css("display","block");
 					$(".adidas_x").css("display","none");
 					$("#indepth_resultados").addClass("m_ace");
@@ -151,6 +168,7 @@ $(".indepth_tenis input[type=radio]").on("change",function(){
 					$("#indepth_resultados").addClass("m_x");
 					$("#tenis_name").html("X");
 					active_ace=false;
+					tenis_name="x";
 			}
 		
 		
@@ -243,7 +261,6 @@ $(document).ready(function(){
 		"width": (ventana_ancho+150)+"px",
 		"height": (ventana_alto+120)+"px"	
 	})
-		loadDisqus($("#indepth_coments"),disqus_url, "http://juanfutbol.com/indepth/"+disqus_url);
 		
 	$('#indepth_container').fullpage({
 		anchors: ['cover','pregunta1','pregunta2','pregunta3','Adidas','pregunta4','pregunta5','pregunta6','pregunta7'],
@@ -291,8 +308,16 @@ $(".indepth_boton").click(function(){
 			
 		}
 		
-		var text_tweet="goles: "+$("input[name=goles_anotados]").val()+" goleador: "+$("input[name=goleador]").val();
-		var tweet_url="https://twitter.com/intent/tweet?url=http%3A%2F%2Froidersp.github.io%2Fadidas-quiz%2F&related=juanfutbol,adidasMX&hashtags=test&text="+encodeURIComponent(text_tweet);
+		$("#linkAdidas").attr("href", url_adidas[tenis_name] );
+		
+		// Hashtag 1-AdidasAce 2-AdidasAce
+		var ht_tweet= hashtags[tenis_name];
+		
+			
+		
+		var text_tweet=texto_tweet+goles: "+$("input[name=goles_anotados]").val()+" goleador: "+$("input[name=goleador]").val();
+		
+		var tweet_url="https://twitter.com/intent/tweet?url=http%3A%2F%2Froidersp.github.io%2Fadidas-quiz%2F&related=juanfutbol,adidasMX&hashtags="+ht_tweet+"&text="+encodeURIComponent(text_tweet);
 		
 		$("#link_tweet").attr("href",tweet_url);
 
