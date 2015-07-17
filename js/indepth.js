@@ -1,4 +1,4 @@
-var hashtags={"ace":"SoyAce,JuanyAdidas","x":"SoyX,juanyadidas"};
+var hashtags={"ace":"SoyAce15,JuanyAdidas","x":"SoyX15,juanyadidas"};
 
 var texto_tweet="";
 
@@ -18,8 +18,6 @@ var jugadores_descripcion={
 	"Benzema":"Eres incontrolable e inconfundible. Extrovertido, clase y lujo se nota en tus movimientos y pases. Tu debilidad, los autos y las mujeres.",
 	"Suarez":"Eres un killer. Los enemigos padecen tu olfato goleador y tus mordidas. Personalidad de fuego. No importan las formas, siempre buscas vencer a tu rival."
 	};
-
-
 
 var tamaño_total=1920;
 var tenis_data={"x":0,"ace":0};
@@ -60,7 +58,6 @@ $('.idepth_marcador').keydown(function(event) {
 	        event.preventDefault(); 
 	    }   
 	}
-
 });
 
 $(document).on({
@@ -112,7 +109,6 @@ $('.indepth_num').keyup(function(event) {
 
 });
 
-
 $(document).on("change","input:radio",function(){
 	$.fn.fullpage.moveSectionDown();
 	
@@ -155,8 +151,6 @@ var indepth_comprobar = function(){
 		disable=true;
 	}
 }
-
-
 
 $(".indepth_tenis input[type=radio]").on("change",function(){
 	if($(".indepth_tenis input[name=pregunta1]").is(":checked") && $(".indepth_tenis input[name=pregunta2]").is(":checked") && $(".indepth_tenis input[name=pregunta3]").is(":checked")){
@@ -206,9 +200,6 @@ $(".indepth_tenis input[type=radio]").on("change",function(){
 
 
 $("input").on("change",function(){
-
-
-	
 
 	
 });
@@ -295,7 +286,6 @@ $(document).ready(function(){
 	    scrollingSpeed: 1000,
 	    afterLoad: function(anchorLink, index){
 
-            
         }
     });
     $("#indepth_resultados").css({
