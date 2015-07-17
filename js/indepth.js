@@ -1,4 +1,4 @@
-var hashtags={"ace":"SoyAce15,JuanyAdidas","x":"SoyX15,juanyadidas"};
+var hashtags={"ace":"SoyAce15,bethedifference","x":"SoyX15,bethedifference"};
 
 var texto_tweet="";
 
@@ -329,7 +329,7 @@ $(".indepth_boton").click(function(){
 		
 		var text_tweet="Soy " + jugadores_twitter[ord_jug] + " y uso adidas " + tenis_a + ". Mi predicción es Goles: "+$("input[name=goles_anotados]").val()+", Marcador: "+$("input[name=goleador]").val()+"-"+$("input[name=goleador2]").val();
 		
-		var tweet_url="https://twitter.com/intent/tweet?url=http%3A%2F%2Froidersp.github.io%2Fadidas-quiz%2F&related=juanfutbol,adidasMX&hashtags="+ht_tweet+"&text="+encodeURIComponent(text_tweet);
+		var tweet_url="https://twitter.com/intent/tweet?url=http%3A%2F%2Fjuanfutbol.com%2Findepth%2Forden-y-caos-en-la-cancha-quien-eres-tu%2F&related=juanfutbol,adidasMX&hashtags="+ht_tweet+"&text="+encodeURIComponent(text_tweet);
 		
 		$("#link_tweet").attr("href",tweet_url);
 

@@ -51,8 +51,8 @@
 }
 
 .indepth_concurso_condiciones{
-	font-size: 8px;
-	margin-top: 20px;
+	font-size: 12px;
+	margin-top: 10px;
 }
 
 .indepth_publica{
@@ -63,6 +63,10 @@
 	left: 20px;
 	font-weight: 300;
 	
+}
+
+#recommended-wrapper, .recommended-wrapper{
+	display: none;
 }
 
 @-webkit-keyframes indepth_arrow_animation {
