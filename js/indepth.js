@@ -1,10 +1,12 @@
-var hashtags={"ace":"AdidasAce,JuanyAdidas","x":"AdidasX,JuanyAdidas"};
+var hashtags={"ace":"SoyAce,JuanyAdidas","x":"SoyX,juanyadidas"};
 
 var texto_tweet="";
 
 var url_adidas={"ace":"http://www.adidas.mx/ace","x":"http://www.adidas.mx/x"};
 
 var jugadores_nombres={"Ozil":"Ozil","Guardado":"Guardado","Xabi":"Xabi Alonso","Rakitic":"Rakitic","Layun":"Miguel Layún","Bale":"Bale","Muller":"Muller","Benzema":"Benzema","Suarez":"Suárez"};
+
+var jugadores_twitter= {"Ozil":"@MesutOzil1088","Guardado":"@AGuardado18","Xabi":"@XabiAlonso","Rakitic":"@ivanrakitic","Layun":"@Miguel_layun","Bale":"@GarethBale11","Muller":"@esmuellert_","Benzema":"@Benzema","Suarez":"@LuisSuarez9"};
 
 var jugadores_descripcion={
 	"Ozil":"Eres un digno dominador del juego. Tímido y callado, pero no te impide demostrar talento. Tú calidad nunca estará en duda. Sabes dominar un chicle con los pies.",
@@ -27,6 +29,7 @@ var ventana_ancho = $(window).width();
 var disable=true;
 var active_ace=false;
 var input_text=false;
+var input_text2=false;
 var input_goles=false;
 var input_radio=false;
 var tenis_name="";
@@ -35,6 +38,19 @@ var tenis_name="";
 
 
 $('.indepth_num').keydown(function(event) {
+	// Allow special chars + arrows 
+	if (event.keyCode == 46 || event.keyCode == 8 || event.keyCode == 9  || event.keyCode == 27 || event.keyCode == 13 || (event.keyCode == 65 && event.ctrlKey === true)  || (event.keyCode >= 35 && event.keyCode <= 39)){
+	        return;
+	}else {
+	    // If it's not a number stop the keypress
+	    if (event.shiftKey || (event.keyCode < 48 || event.keyCode > 57) && (event.keyCode < 96 || event.keyCode > 105 )) {
+	        event.preventDefault(); 
+	    }   
+	}
+
+});
+
+$('.idepth_marcador').keydown(function(event) {
 	// Allow special chars + arrows 
 	if (event.keyCode == 46 || event.keyCode == 8 || event.keyCode == 9  || event.keyCode == 27 || event.keyCode == 13 || (event.keyCode == 65 && event.ctrlKey === true)  || (event.keyCode >= 35 && event.keyCode <= 39)){
 	        return;
@@ -64,8 +80,6 @@ $(document).on("click","#indepth_return",function(){
 	input_text=false;
 	input_goles=false;
 	input_radio=false;
-	console.log("---");
-	console.log(jugadores_num);
 	
 	$('#indepth_container').fullpage({
 		anchors: ['cover','pregunta1','pregunta2','pregunta3','Adidas','pregunta4','pregunta5','pregunta6','pregunta7'],
@@ -108,7 +122,7 @@ $(document).on("change","input:radio",function(){
 	indepth_comprobar();
 });
 
-$('.idepth_goleador').keyup(function(event) {
+$('.idepth_marcador').keyup(function(event) {
 	if($(this).val()!="" ){
 		input_text=true;
 	}else{
@@ -118,13 +132,20 @@ $('.idepth_goleador').keyup(function(event) {
 	indepth_comprobar();
 });
 
+$('.idepth_marcador2').keyup(function(event) {
+	if($(this).val()!="" ){
+		input_text2=true;
+	}else{
+		input_text2=false;
+	}
+	
+	indepth_comprobar();
+});
+
 
 var indepth_comprobar = function(){
-	console.log("text:" +input_text);
-	console.log("radio:" +input_radio);
-	console.log("goles:" +input_goles);
-	console.log("-----");
-	if(input_text && input_radio && input_goles){
+
+	if(input_text && input_text2 && input_radio && input_goles){
 		$(".indepth_boton").removeClass("disable");
 		disable=false;
 	}else{
@@ -283,7 +304,6 @@ $(document).ready(function(){
 $(".indepth_boton").click(function(){
 	
 	if(!disable){
-		console.log(tenis_data);
 		var fornm_t= $('form').serializeArray();
 		$.each(fornm_t, function(i,pregunta){
 			if(i>2 && i<6){
@@ -294,9 +314,7 @@ $(".indepth_boton").click(function(){
 		var ord_jug=null;
 		
 		var listKeys = [];
-		for(x in jugadores_num) listKeys.push(x);
-		console.log(listKeys); 
-		
+		for(x in jugadores_num) listKeys.push(x);		
 		for(i=0;i<listKeys.length;i++){
 			if(ord_jug==null){
 				ord_jug=listKeys[i];
@@ -313,9 +331,11 @@ $(".indepth_boton").click(function(){
 		// Hashtag 1-AdidasAce 2-AdidasAce
 		var ht_tweet= hashtags[tenis_name];
 		
-			
+		var tenis_a=((tenis_name=="ace")? "Ace" : "X")
 		
-		var text_tweet=texto_tweet+"goles: "+$("input[name=goles_anotados]").val()+" goleador: "+$("input[name=goleador]").val();
+		$("#tenis_name_a").html(tenis_a)	
+		
+		var text_tweet="Soy " + jugadores_twitter[ord_jug] + " y uso adidas " + tenis_a + ". Mi predicción es Goles: "+$("input[name=goles_anotados]").val()+", Marcador: "+$("input[name=goleador]").val()+"-"+$("input[name=goleador2]").val();
 		
 		var tweet_url="https://twitter.com/intent/tweet?url=http%3A%2F%2Froidersp.github.io%2Fadidas-quiz%2F&related=juanfutbol,adidasMX&hashtags="+ht_tweet+"&text="+encodeURIComponent(text_tweet);
 		

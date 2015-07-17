@@ -50,6 +50,11 @@
 	opacity: 1;
 }
 
+.indepth_concurso_condiciones{
+	font-size: 8px;
+	margin-top: 20px;
+}
+
 @-webkit-keyframes indepth_arrow_animation {
   0%   { 
 	  transform:  translate(0,0px);
@@ -521,7 +526,7 @@
 .indepth_cuadro_text{
 	background-color: #020202;
 	border: none;
-	width: 400px;
+	width: 30px;
 	height: 40px;
 	margin-top: 10px;
 	margin-bottom: 30px;
@@ -530,7 +535,9 @@
 	line-height: 40px;
 	font-style: italic;
 	padding-left: 15px;
+	padding-right: 15px;
 	font-weight: 300;
+	text-align: right;
 }
 
 .indepth_pregunta_t{
@@ -856,7 +863,10 @@
   }
  }
 
-
+.indepth_guion{
+	font-size: 20px;
+	color: white;
+}
 
 
 @media screen and (min-width: 1920px) {
@@ -960,9 +970,7 @@
 	  margin-top: 15px;
 	}
 	
-	.indepth_cuadro_text{
-		width: 90%;
-	}
+
 	
 	#indepth_cover .indepth_parallax_back{
 		background-image: url(../images/Portada/Portada_movil.jpg);
