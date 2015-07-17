@@ -114,6 +114,8 @@ $('.indepth_num').keyup(function(event) {
 
 
 $(document).on("change","input:radio",function(){
+	$.fn.fullpage.moveSectionDown();
+	
 	if($(".indepth_tenis input[name=pregunta1]").is(":checked") && $(".indepth_tenis input[name=pregunta2]").is(":checked") && $(".indepth_tenis input[name=pregunta3]").is(":checked")  && $(" input[name=pregunta4]").is(":checked")  && $(" input[name=pregunta5]").is(":checked")  && $(" input[name=pregunta6]").is(":checked")){
 		input_radio=true;
 	}else{

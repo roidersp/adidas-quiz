@@ -55,6 +55,16 @@
 	margin-top: 20px;
 }
 
+.indepth_publica{
+	position: absolute;
+	color: white;
+	font-size: 14px;
+	bottom: 10px;
+	left: 20px;
+	font-weight: 300;
+	
+}
+
 @-webkit-keyframes indepth_arrow_animation {
   0%   { 
 	  transform:  translate(0,0px);
@@ -491,7 +501,7 @@
 	padding: 50px 40px;
 	background-color: rgba(0, 0, 0, 0.75);
 	margin: auto;
-	
+	position: relative;
 }
 
 .indepth_radios{
@@ -538,6 +548,7 @@
 	padding-right: 15px;
 	font-weight: 300;
 	text-align: right;
+	border: 1px solid rgb(66, 66, 66);
 }
 
 .indepth_pregunta_t{
