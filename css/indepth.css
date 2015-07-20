@@ -588,6 +588,13 @@
 	background-repeat: no-repeat;
 	display: table;
 	background-position: right center;
+	z-index: 200;
+	top:0;
+}
+
+#top-bar-wrapper{
+	z-index: 300;
+	display: none;
 }
 
 .j_Bale{
@@ -1033,7 +1040,24 @@
 }
 
 @media screen and (max-width: 414px) {
+	#header{
+		display: none;
+	}
+	.indepth_publica{
+	position: inherit;
+	color: white;
+	margin-top: 20px;
+	font-size: 14px;
+	bottom: 10px;
+	left: 20px;
+	font-weight: 300;
+	
+}
 
+.indepth_lo_quiero_cont{
+	bottom: 60px;
+}
+	
 	#indepth_cover{
 		height: 540px;	
 	}
@@ -1049,15 +1073,28 @@
 	
 
 	
+	.indepth_concurso_text{
+	font-size: 16px;
+}
+
+.indepth_tenis_title{
+	font-size: 22px;
+}
+
+.indepth_pregunta{
+	font-size: 22px;
+}
+
+	
 	}
 	
 @media screen and (max-width: 360px) {
 .indepth_concurso_text{
-	font-size: 18px;
+	font-size: 16px;
 }
 
 .indepth_tenis_title{
-	font-size: 28px;
+	font-size: 22px;
 }
 
 .indepth_tenis_text{
@@ -1068,7 +1105,9 @@
   width: 90%;
   height: 100px;
 }
-	
+	.indepth_pregunta{
+		font-size: 20px;
+	}
 
 }
 

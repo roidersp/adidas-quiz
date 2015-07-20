@@ -22,7 +22,7 @@ var jugadores_descripcion={
 var tamaño_total=1920;
 var tenis_data={"x":0,"ace":0};
 var jugadores_num={"Ozil":0,"Guardado":0,"Xabi":0,"Rakitic":0,"Layun":0,"Bale":0,"Muller":0,"Benzema":0,"Suarez":0};
-var ventana_alto = $(window).height();
+var ventana_alto = window.innerHeight ? window.innerHeight : $(window).height();
 var ventana_ancho = $(window).width();
 var disable=true;
 var active_ace=false;
@@ -266,6 +266,11 @@ $(document).ready(function(){
 	 var ventana_alto = $(window).height();
 	var ventana_ancho = $(window).width();
 	
+	
+	$('html, body').animate({
+			scrollTop: 100
+		}, 000);
+	
 	$(".vimeoFrame").css({
 		"width": (ventana_ancho)+"px",
 		"height": (ventana_alto-0)+"px"	
@@ -294,6 +299,8 @@ $(document).ready(function(){
 });
 
 $(".indepth_boton").click(function(){
+	
+	
 	
 	if(!disable){
 		var fornm_t= $('form').serializeArray();
@@ -347,7 +354,9 @@ $(".indepth_boton").click(function(){
 		$("body").css({
 			height:"100%",
 			overflow: "hidden"
-		})
+		});
+		
+		window.scrollto(0,1);
 	}else{
 		
 		var v={"pregunta1":false,"pregunta2":false,"pregunta3":false,"pregunta4":false,"pregunta5":false,"pregunta6":false};
@@ -375,7 +384,7 @@ $(".indepth_boton").click(function(){
 
 $(window).on("resize", function(){
 	
-	 var ventana_alto = $(window).height();
+	 var ventana_alto = window.innerHeight ? window.innerHeight : $(window).height();
 	var ventana_ancho = $(window).width();
 	
 	$(".vimeoFrame").css({
