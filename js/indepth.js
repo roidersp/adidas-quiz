@@ -299,9 +299,7 @@ $(document).ready(function(){
 });
 
 $(".indepth_boton").click(function(){
-	
-	
-	
+
 	if(!disable){
 		var fornm_t= $('form').serializeArray();
 		$.each(fornm_t, function(i,pregunta){
@@ -384,7 +382,8 @@ $(".indepth_boton").click(function(){
 
 $(window).on("resize", function(){
 	
-	 var ventana_alto = window.innerHeight ? window.innerHeight : $(window).height();
+
+	var ventana_alto = window.innerHeight ? window.innerHeight : $(window).height();
 	var ventana_ancho = $(window).width();
 	
 	$(".vimeoFrame").css({
@@ -397,10 +396,9 @@ $(window).on("resize", function(){
 		"height": (ventana_alto+120)+"px"	
 	})
 	 $("#indepth_resultados").css({
-	"width":ventana_ancho+"px",
-	"height":ventana_alto+"px"
+		"width":ventana_ancho+"px",
+		"height":ventana_alto+"px"
+	});
 });
-	 
-	 });
 
 
