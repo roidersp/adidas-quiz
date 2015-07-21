@@ -67,7 +67,7 @@ $(document).on({
 	mouseleave: function(){
 		$(".indepth_loquiero_cuadro").hide();
 	}
-},".indepth_lo_quiero_cont")
+},".indepth_lo_quiero_cont");
 
 $(document).on("click","#indepth_return",function(){
 	$(" input:radio").attr("checked", false);	
@@ -308,6 +308,10 @@ $(".indepth_boton").click(function(){
 			}
 		});
 		
+		var jugadore_rand=[]
+		jugador_m=false;
+		
+		
 		var ord_jug=null;
 		
 		var listKeys = [];
@@ -318,9 +322,25 @@ $(".indepth_boton").click(function(){
 			}else{
 				if(jugadores_num[listKeys[i]]>jugadores_num[ord_jug]){
 					ord_jug=listKeys[i];
+					
 				}
 			}
 			
+			if(jugadores_num[listKeys[i]]>1){
+				jugador_m=true;
+			}
+			
+			if(jugadores_num[listKeys[i]]>0){
+				jugadore_rand.push(listKeys[i])
+			}
+			
+		}
+		
+		
+		if(!jugador_m){
+			console.log(jugadore_rand);
+			
+			ord_jug=jugadore_rand[Math.floor(Math.random() * 6) + 1 ];
 		}
 		
 		$("#linkAdidas").attr("href", url_adidas[tenis_name] );
