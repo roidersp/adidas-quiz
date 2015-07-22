@@ -331,17 +331,17 @@ $(".indepth_boton").click(function(){
 			}
 			
 			if(jugadores_num[listKeys[i]]>0){
-				jugadore_rand.push(listKeys[i])
+				jugadore_rand.push(listKeys[i]);
 			}
 			
 		}
 		
 		
 		if(!jugador_m){
-			console.log(jugadore_rand);
 			
-			ord_jug=jugadore_rand[Math.floor(Math.random() * 6) + 1 ];
+			ord_jug=jugadore_rand[Math.floor(Math.random() * 2) + 0 ];
 		}
+		
 		
 		$("#linkAdidas").attr("href", url_adidas[tenis_name] );
 		
